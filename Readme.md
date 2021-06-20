@@ -1,6 +1,6 @@
 # Личный проект «Шесть городов»
 
-- Студент: [chek](https://up.htmlacademy.ru/react/7/user/1823989).
+- Студент: [Егор](https://up.htmlacademy.ru/react/7/user/1823989).
 - Наставник: [Александр Тимоновский](https://htmlacademy.ru/profile/id768125).
 
 ---

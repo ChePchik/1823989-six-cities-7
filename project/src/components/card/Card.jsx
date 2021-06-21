@@ -6,7 +6,6 @@ function PlaceCard(props) {
   return (
     <article className='cities__place-card place-card'>
       {isPremium ? <div className='place-card__mark'><span>Premium</span></div>:''}
-      {/* {isPremium && PremiumMark()} */}
       <div className='cities__image-wrapper place-card__image-wrapper'>
         <a href='#'>
           <img className='place-card__image' src={picter} width='260' height='200' alt='Place'/>

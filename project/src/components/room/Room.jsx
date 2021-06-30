@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Reviews from '../room/Reviews';
 import Comment from '../room/Comment';
-import Maps from '../maps/Maps';
+// import Maps from '../maps/Maps';
 import Recommend from '../recommendation/Recommend';
 
 export default function Room(props) {
@@ -104,7 +104,7 @@ export default function Room(props) {
             </section>
           </div>
         </div>
-        <Maps />
+        {/* <Maps /> */}
       </section>
 
       <div className='container'>

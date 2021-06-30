@@ -13,8 +13,8 @@ function PlaceCard(props) {
     near: '-places__',//near-places__card place-card
     cities: '__place-', //cities__place-card place-card
   };
-  console.log(sk[typeCard], 'typeCard');
-  console.log(sk, 'typeCard');
+  // console.log(sk[typeCard], 'typeCard');
+  // console.log(sk, 'typeCard');
   return (
     <article className={`${typeCard}${sk[typeCard]}card place-card`}>
       {isPremium ? <div className='place-card__mark'><span>Premium</span></div> : ''}

@@ -2,9 +2,8 @@ import React from 'react';
 // import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import SentenceList from '../card/SentenceList';
-// import Favorites from '../favorites/Favorites';
-// import Room from '../room/Room';
-// import Header from '../header/Header';
+import Maps from '../maps/Maps';
+
 
 export default function Home(props) {
   const { offers } = props;
@@ -86,7 +85,10 @@ export default function Home(props) {
 
             </section>
             <div className='cities__right-section'>
-              <section className='cities__map map'></section>
+              <section className='cities__map map'>
+                <Maps points={offers} />
+
+              </section>
             </div>
           </div>
         </div>

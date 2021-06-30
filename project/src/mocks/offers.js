@@ -5,8 +5,8 @@ export const offers = [
     bedrooms: 1,
     city: {
       location: {
-        latitude: 52.370216,
-        longitude: 4.895168,
+        latitude: 52.35514938496378,
+        longitude: 4.673877537499948,
         zoom: 10,
       },
       name: 'Amsterdam',
@@ -39,8 +39,8 @@ export const offers = [
     bedrooms: 2,
     city: {
       location: {
-        latitude: 52.370216,
-        longitude: 4.895168,
+        latitude: 52.3605059352529,
+        longitude: 4.738197326660156,
         zoom: 10,
       },
       name: 'Paris',
@@ -73,8 +73,8 @@ export const offers = [
     bedrooms: 1,
     city: {
       location: {
-        latitude: 52.370216,
-        longitude: 4.895168,
+        latitude: 52.389849169813694,
+        longitude: 4.698028564453124,
         zoom: 10,
       },
       name: 'Brussels',
@@ -107,8 +107,8 @@ export const offers = [
     bedrooms: 1,
     city: {
       location: {
-        latitude: 52.370216,
-        longitude: 4.895168,
+        latitude: 52.332821597504996,
+        longitude: 4.7069549560546875,
         zoom: 10,
       },
       name: 'Dusseldorf',
@@ -141,8 +141,8 @@ export const offers = [
     bedrooms: 10,
     city: {
       location: {
-        latitude: 52.370216,
-        longitude: 4.895168,
+        latitude: 52.331982407533786,
+        longitude: 4.638633728027344,
         zoom: 10,
       },
       name: 'Dusseldorf',

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FavoritItem from '../favorites/FavoritItem';
+import FavoritItem from '../../components/FavoritItem/FavoritItem';
 
 export default function FavoritList(props) {
   const { favoritesList } = props;

@@ -1,12 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import All from './home/All';
-import Header from './header/Header';
+import Header from './components/Header/Header';
 
-import Home from './home/Home';
-import Favorites from './favorites/Favorites';
-import Room from './room/Room';
+import Home from './page/Home/Home';
+import Favorites from './page/Favorites/Favorites';
+import Room from './page/Room/Room';
 
 function NotFound() {
   return (
@@ -26,7 +27,7 @@ function EmptyFound() {
   );
 }
 
-export default function App(props) {
+function App(props) {
   const { offers, reviews } = props;
 
   return (
@@ -37,10 +38,10 @@ export default function App(props) {
             <Header />
             <Switch>
               <Route exact path='/'>
-                <Home offers={offers} />
+                <Home />
               </Route>
               <Route exact path='/favorites'>
-                <Favorites offers={offers} />
+                <Favorites />
               </Route>
               <Route path='/offer/:id'
                 render={({ match }) => {
@@ -66,3 +67,10 @@ App.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.object),
   reviews: PropTypes.arrayOf(PropTypes.object),
 };
+
+const mapStateToProps = (state) => ({
+  offers: state.offers,
+  reviews: state.reviews,
+});
+
+export default connect(mapStateToProps)(App);

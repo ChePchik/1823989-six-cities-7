@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Reviews from '../room/Reviews';
-import Comment from '../room/Comment';
+import Reviews from '../../components/Reviews/Reviews';
+import Comment from '../../components/Comment/Comment';
 // import Maps from '../maps/Maps';
-import Recommend from '../recommendation/Recommend';
+import Recommend from '../../container/Recommendation/Recommend';
 
 export default function Room(props) {
   /* eslint no-console: 0 */

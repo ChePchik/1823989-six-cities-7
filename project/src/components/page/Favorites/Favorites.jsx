@@ -1,9 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import FavoritFooter from './FavoritFooter';
-import FavoritList from './FavoritList';
+import FavoritFooter from '../../components/FavoritFooter/FavoritFooter';
+import FavoritList from '../../container/FavoritList/FavoritList';
 
-export default function Favorites(props) {
+function Favorites(props) {
   const { offers } = props;
   const favoritesList = offers.filter(({ isFavorite }) => isFavorite);
   /* eslint no-console: 0 */
@@ -28,3 +29,9 @@ export default function Favorites(props) {
 Favorites.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.object),
 };
+
+const mapStateToProps = (state) => ({
+  offers: state.offers,
+});
+
+export default connect(mapStateToProps)(Favorites);

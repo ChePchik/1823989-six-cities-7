@@ -5,7 +5,7 @@ import Card from '../../components/Card/Card';
 export default function SentenceList(props) {
   const { offers } = props;
   /* eslint no-console: 0 */
-  console.log(offers);
+  // console.log(offers, 101);
   return (
     <div className='cities__places-list places__list tabs__content'>
       {offers.map((item, id) => (

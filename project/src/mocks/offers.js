@@ -107,7 +107,7 @@ export const offers = [
     bedrooms: 1,
     city: {
       location: {
-        latitude: 52.332821597504996,
+        latitude: 52.35514938496378,
         longitude: 4.7069549560546875,
         zoom: 10,
       },
@@ -127,7 +127,7 @@ export const offers = [
     isPremium: false,
     location: {
       latitude: 52.35514938496378,
-      longitude: 4.673877537499948,
+      longitude: 4.7069549560546875,
       zoom: 8,
     },
     maxAdults: 4,

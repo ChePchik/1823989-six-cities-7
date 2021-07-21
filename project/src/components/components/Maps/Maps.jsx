@@ -14,7 +14,9 @@ function Maps({ points }) {
   });
 
   useEffect(() => {
+    const markers = leaflet.layerGroup();
     if (map) {
+      markers.addTo(map);
       points.forEach(({ city: { location: { latitude, longitude } } }) => {
         leaflet
           .marker({
@@ -23,9 +25,12 @@ function Maps({ points }) {
           }, {
             icon: defaultCustomIcon,
           })
-          .addTo(map);
+          .addTo(markers);
       });
     }
+    return () => {
+      markers.clearLayers();
+    };
   }, [map, points]);
 
   return (

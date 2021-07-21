@@ -8,21 +8,16 @@ import {
 } from '../../../store/action';
 function CityList(props) {
   const { city, offers, currentCity } = props;
-
-  /* eslint no-console: 0 */
-  console.log(currentCity, 'currentCit');
-  console.log(offers, 'offers');
   return (
     <div className='tabs'>
       <section className='locations container'>
         <ul className="locations__list tabs__list"
           onClick={(e) => {
             e.preventDefault();
-            console.log('onClick');
             if (e.target.closest('li')) {
               const nameCity = e.target.closest('li').dataset.city;
-              getCurrentCity(nameCity);
-              getListOffers(offers, nameCity);
+              props.getCurrentCity(nameCity);
+              props.getListOffers(offers, nameCity);
             }
           }}
         >
@@ -35,11 +30,11 @@ function CityList(props) {
 }
 
 CityList.propTypes = {
-  city: PropTypes.arrayOf(PropTypes.object).isRequired,
+  city: PropTypes.string.isRequired,
   currentCity: PropTypes.string.isRequired,
   offers: PropTypes.arrayOf(PropTypes.object),
-  // getCurrentCity: PropTypes.func,
-  // getListOffers: PropTypes.func,
+  getCurrentCity: PropTypes.func,
+  getListOffers: PropTypes.func,
 };
 
 const mapStateToProps = (state) => ({

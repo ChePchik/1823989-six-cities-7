@@ -6,9 +6,7 @@ import Maps from '../../components/Maps/Maps';
 import CityList from '../../container/CityList/CityList';
 
 function Home(props) {
-  const { offers } = props;
-  /* eslint no-console: 0 */
-  // console.log(offers);
+  const { offersSelect, currentCity } = props;
   return (
     <div className='page page--gray page--main'>
 
@@ -19,7 +17,7 @@ function Home(props) {
           <div className='cities__places-container container'>
             <section className='cities__places places'>
               <h2 className='visually-hidden'>Places</h2>
-              <b className='places__found'>312 places to stay in Amsterdam</b>
+              <b className="places__found">{offersSelect.length} {offersSelect.length === (1 || 0) ? 'place' : 'places'} to stay in {currentCity}</b>
               <form className='places__sorting' action='#' method='get'>
                 <span className='places__sorting-caption'>Sort by</span>
                 <span className='places__sorting-type' tabIndex='0'>
@@ -46,12 +44,12 @@ function Home(props) {
                   </li>
                 </ul>
               </form>
-              <SentenceList offers={offers} />
+              <SentenceList offers={offersSelect} />
 
             </section>
             <div className='cities__right-section'>
               <section className='cities__map map'>
-                <Maps points={offers} />
+                <Maps points={offersSelect} />
 
               </section>
             </div>
@@ -63,11 +61,13 @@ function Home(props) {
 }
 
 Home.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.object),
+  offersSelect: PropTypes.arrayOf(PropTypes.object),
+  currentCity: PropTypes.string,
 };
 
 const mapStateToProps = (state) => ({
-  offers: state.offers,
+  offersSelect: state.offersSelect,
+  currentCity: state.currentCity,
 });
 
 export default connect(mapStateToProps)(Home);
